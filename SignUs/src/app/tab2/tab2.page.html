@@ -1,0 +1,72 @@
+<ion-content>
+
+  <ion-toolbar>
+    <ion-title color="primary" size="small">Signalez</ion-title>
+  </ion-toolbar>
+
+  <ion-card>
+    <ion-item>
+      <ion-grid>
+        <ion-row>
+          <img height="250px" src="../assets/carte-guyane.jpg">
+        </ion-row>
+        <br>
+        <ion-row>
+          <ion-label color="tertialy">Adrsess</ion-label>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+
+    <form action="/action_page.php">
+      <label for="img">Select image:</label>
+      <input type="file" id="img" name="img" accept="image/*">
+      <input type="submit">
+    </form>
+  </ion-card>
+
+
+  <ion-card>
+    <ion-list>
+      <ion-radio-group value="biff">
+        <ion-list-header>
+          <ion-label color="tertialy">Statut :</ion-label>
+        </ion-list-header>
+
+        <ion-item lines="none">
+          <ion-label color="tertialy">Vandalisme</ion-label>
+          <ion-radio color="warning" slot="start" value="alpha"></ion-radio>
+        </ion-item>
+
+        <ion-item lines="none">
+          <ion-label color="tertialy">Nid de poule</ion-label>
+          <ion-radio color="warning" slot="start" value="bravo"></ion-radio>
+        </ion-item>
+
+        <ion-item lines="none">
+          <ion-label color="tertialy">Route barrée</ion-label>
+          <ion-radio color="warning" slot="start" value="charlie"></ion-radio>
+        </ion-item>
+
+        <ion-item lines="none">
+          <ion-label color="tertialy">Dépôt sauvage d'ordures</ion-label>
+          <ion-radio color="warning" slot="start" value="delta"></ion-radio>
+        </ion-item>
+
+        <ion-item lines="none">
+          <ion-label color="tertialy">autre</ion-label>
+          <ion-radio color="warning" slot="start" value="echo"></ion-radio>
+        </ion-item>
+
+        <ion-item lines="none">
+          <ion-label position="stacked">Commentaire</ion-label>
+          <ion-textarea placeholder="Détaillez"></ion-textarea>
+        </ion-item>
+
+      </ion-radio-group>
+    </ion-list>
+
+    <br>
+    <ion-button shape="round" expand="block" [routerLink]="['/recapitulatif-du-signallement']">Valider</ion-button>
+  </ion-card>
+
+</ion-content>
